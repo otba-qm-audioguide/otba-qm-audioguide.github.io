@@ -26,11 +26,14 @@
 
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
   <div class="jp-gui jp-interface audio-footer-container" data-role="footer" data-position="fixed" data-tap-toggle="false">
-    <div class="audio-player">
+    <div class="audio-player" data-audio-en="{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file }}" data-audio-ar="{{ site.baseurl }}{{ site.audio_path }}{{ page.arabic_audio_file }}">
       
       <div class="player-now-playing">
         <p>
-        {{ page.title }}
+        <span class="language-content language-content-en is-visible">{{ page.title }}</span>
+        {% if page.arabic_title != null %}
+          <span class="language-content language-content-ar" dir="rtl">{{ page.arabic_title }}</span>
+        {% endif %}
         </p>
       </div>
 

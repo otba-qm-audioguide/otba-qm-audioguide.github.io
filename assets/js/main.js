@@ -34,4 +34,19 @@ $(document).ready(function() {
     
   });
 
+  $(".language-button").on("click", function() {
+    var language = $(this).data("language");
+    var audioPlayer = $(".audio-player");
+    var audioSource = audioPlayer.data("audio-" + language);
+
+    $(".language-button").removeClass("is-active");
+    $(this).addClass("is-active");
+    $(".language-content").removeClass("is-visible");
+    $(".language-content-" + language).addClass("is-visible");
+
+    if (audioSource && $("#jquery_jplayer_1").length) {
+      $("#jquery_jplayer_1").jPlayer("setMedia", { title: "", mp3: audioSource });
+    }
+  });
+
 });
