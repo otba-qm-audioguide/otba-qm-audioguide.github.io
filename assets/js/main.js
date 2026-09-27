@@ -34,15 +34,23 @@ $(document).ready(function() {
     
   });
 
-  $(".language-button").on("click", function() {
-    var language = $(this).data("language");
+  $(document).on("click", ".language-button", function(event) {
+    event.preventDefault();
+
+    var language = this.getAttribute("data-language");
     var audioPlayer = $(".audio-player");
     var audioSource = audioPlayer.data("audio-" + language);
 
     $(".language-button").removeClass("is-active").attr("aria-pressed", "false");
-    $(this).addClass("is-active").attr("aria-pressed", "true");
-    $(".language-content").attr("hidden", true);
-    $(".language-content-" + language).removeAttr("hidden");
+    this.classList.add("is-active");
+    this.setAttribute("aria-pressed", "true");
+
+    document.querySelectorAll(".language-content").forEach(function(content) {
+      content.hidden = true;
+    });
+    document.querySelectorAll(".language-content-" + language).forEach(function(content) {
+      content.hidden = false;
+    });
 
     if (audioSource && $("#jquery_jplayer_1").length) {
       $("#jquery_jplayer_1").jPlayer("setMedia", { title: "", mp3: audioSource });
