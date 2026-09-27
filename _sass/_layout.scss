@@ -512,45 +512,45 @@ Hero images on audio guide stop pages
 Audio Player Styling
 *********************************************/
 
+.language-content[hidden] {
+    display: none !important;
+}
+
 .language-content-ar {
-    display: none;
     text-align: right;
-}
-
-.language-content-ar.is-visible {
-    display: block;
-}
-
-.language-content-en {
-    display: block;
-}
-
-.language-content-en:not(.is-visible) {
-    display: none;
 }
 
 .language-toggle {
     display: flex;
     justify-content: center;
-    gap: 0.5em;
     margin: 0 auto $spacing-unit;
+    border: 1px solid $brand-color;
+    border-radius: 3px;
+    overflow: hidden;
+    width: fit-content;
 }
 
 .language-button {
     background: $background-darker;
-    border: 1px solid $brand-color;
-    border-radius: 2px;
+    border: 0;
+    border-right: 1px solid $brand-color;
     color: $text-color;
     cursor: pointer;
     font: inherit;
     font-size: $small-font-size;
-    padding: 0.35em 0.75em;
+    min-width: 110px;
+    padding: 0.5em 0.9em;
+}
+
+.language-button:last-child {
+    border-right: 0;
 }
 
 .language-button.is-active,
 .language-button:hover,
 .language-button:focus {
     background: $brand-color;
+    color: #ffffff;
 }
 
 .jp-audio {

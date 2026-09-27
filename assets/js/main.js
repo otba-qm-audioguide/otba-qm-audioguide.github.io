@@ -39,10 +39,10 @@ $(document).ready(function() {
     var audioPlayer = $(".audio-player");
     var audioSource = audioPlayer.data("audio-" + language);
 
-    $(".language-button").removeClass("is-active");
-    $(this).addClass("is-active");
-    $(".language-content").removeClass("is-visible");
-    $(".language-content-" + language).addClass("is-visible");
+    $(".language-button").removeClass("is-active").attr("aria-pressed", "false");
+    $(this).addClass("is-active").attr("aria-pressed", "true");
+    $(".language-content").attr("hidden", true);
+    $(".language-content-" + language).removeAttr("hidden");
 
     if (audioSource && $("#jquery_jplayer_1").length) {
       $("#jquery_jplayer_1").jPlayer("setMedia", { title: "", mp3: audioSource });

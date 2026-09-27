@@ -13,15 +13,15 @@ layout: master_episode
       {% if page.title != null %}
         <h3 class="post-header-title language-content language-content-en is-visible">{{ page.title }}</h3>
         {% if page.arabic_title != null %}
-          <h3 class="post-header-title language-content language-content-ar" dir="rtl">{{ page.arabic_title }}</h3>
+          <h3 class="post-header-title language-content language-content-ar" dir="rtl" hidden>{{ page.arabic_title }}</h3>
         {% endif %}
       {% endif %}
     </div>
   </header>
   {% if page.arabic_content != null %}
     <div class="language-toggle" role="group" aria-label="Language">
-      <button type="button" class="language-button is-active" data-language="en">English</button>
-      <button type="button" class="language-button" data-language="ar">العربية</button>
+      <button type="button" class="language-button is-active" data-language="en" aria-pressed="true">English</button>
+      <button type="button" class="language-button" data-language="ar" aria-pressed="false">العربية</button>
     </div>
   {% endif %}
   {% if page.hero_images != null %}
@@ -40,7 +40,7 @@ layout: master_episode
       {{ content }}
     </div>
     {% if page.arabic_content != null %}
-      <div class="language-content language-content-ar" dir="rtl">
+      <div class="language-content language-content-ar" dir="rtl" hidden>
         {{ page.arabic_content | markdownify }}
       </div>
     {% endif %}
