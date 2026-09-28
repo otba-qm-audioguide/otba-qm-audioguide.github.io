@@ -6,7 +6,7 @@
 
 
 // Our variables
-$base-font-family: 'Open Sans', sans-serif;
+$base-font-family: 'Roboto Condensed', 'Arial Narrow', Arial, sans-serif;
 
 $base-font-size:   20px;
 
@@ -16,11 +16,11 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       	#fafafa;
-$background-hr:		#383838;
-$background-color: 	#222222;
-$background-darker: #1B1B1B;
-$brand-color:	   	#43A047;
+$text-color:       	#000;
+$background-hr:		#bdbdbd;
+$background-color: 	#d0c5be;
+$background-darker: #464646;
+$brand-color:	   	#e83082;
 $anchor-hover-color:	lighten($brand-color, 30%);
 
 $player-now-playing-size:   13px;
