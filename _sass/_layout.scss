@@ -517,6 +517,7 @@ Audio Player Styling
 }
 
 .language-content-ar {
+    font-family: 'Open Sans', sans-serif;
     text-align: right;
 }
 
@@ -536,7 +537,7 @@ Audio Player Styling
     border-right: 1px solid $brand-color;
     color: $text-color;
     cursor: pointer;
-    font: inherit;
+    font-family: 'Open Sans', sans-serif;
     font-size: $small-font-size;
     min-width: 110px;
     padding: 0.5em 0.9em;
