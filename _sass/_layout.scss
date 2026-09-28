@@ -416,9 +416,8 @@
         
     }
     .post-header-section-title {
-        //color: lighten($brand-color, 20%);
         display: inline-block;
-        color: lighten($brand-color, 50%);
+        color: #000;
         font-size: 26px;
         line-height: 26px;
         margin-top: 0;
@@ -426,7 +425,7 @@
         text-align: center;
     }
     .post-header-title {
-        color: lighten($brand-color, 10%);
+        color: #000;
         font-size: 20px;
         line-height: 26px;
         margin-top: 0;
@@ -570,7 +569,7 @@ Audio Player Styling
 }
 
 .audio-footer-container {
-    background-color: darken($background-darker, 5%);
+    background-color: $brand-color;
     bottom: 0;
     left: 0;
     right: 0;
@@ -591,6 +590,7 @@ Audio Player Styling
 
 .player-now-playing {
     display: block;
+    color: #fff;
     font-size: $player-now-playing-size;
     line-height: $player-now-playing-size;
     //height: $player-now-playing-size * 3;
@@ -616,13 +616,13 @@ Audio Player Styling
         float: right;
         line-height: $player-button-size;
         vertical-align: top;
-        color: $player-bgcolor;
+        color: #fff;
     }
     .player-buttons-next-number {
         float: left;
         line-height: $player-button-size;
         vertical-align: top;
-        color: $player-bgcolor;
+        color: #fff;
     }
     .player-buttons-prev {
         display: inline-block;
